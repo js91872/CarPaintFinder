@@ -1,0 +1,15 @@
+[
+  {
+    "manufacturer":"EXAMPLE ONLY - DO NOT PUBLISH",
+    "model":"Sample Vehicle",
+    "yearFrom":2020,
+    "yearTo":2021,
+    "oemCode":"SAMPLE-000",
+    "colorName":"Sample Blue",
+    "sourceUrl":"https://example.org/source-document",
+    "sourcePublisher":"Example Publisher",
+    "sourceTitle":"Example Document",
+    "reuseRights":"Not assessed - placeholder",
+    "verification":"pending"
+  }
+]
