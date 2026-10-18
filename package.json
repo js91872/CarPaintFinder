@@ -9,7 +9,8 @@
     "typecheck": "tsc --noEmit",
     "import:paint": "node scripts/import-paint-candidates.mjs",
     "import:locations": "node scripts/import-location-candidates.mjs",
-    "db:status": "node scripts/database-status.mjs"
+    "db:status": "node scripts/database-status.mjs",
+    "validate:locations": "node scripts/validate-location-candidates.mjs"
   },
   "dependencies": {
     "next": "^15.5.0",
