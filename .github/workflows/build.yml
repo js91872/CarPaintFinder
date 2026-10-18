@@ -16,6 +16,7 @@ jobs:
       - run: npm install --package-lock-only --ignore-scripts
       - run: npm ci
       - run: npm run test:data
+      - run: npm run test:locations
       - run: npm run typecheck
       - run: npm run build
       - name: Start production server
@@ -35,7 +36,7 @@ jobs:
           BASE_URL: http://127.0.0.1:3099
         run: |
           npm run smoke:api
-          for path in / /paint-codes /how-to-find-paint-code /about /privacy /terms /contact /robots.txt /sitemap.xml; do
+          for path in / /paint-codes /how-to-find-paint-code /about /privacy /terms /contact /api/health /robots.txt /sitemap.xml; do
             curl --fail --silent --show-error "http://127.0.0.1:3099$path" > /dev/null
           done
       - name: Show server logs on failure
