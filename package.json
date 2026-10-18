@@ -12,7 +12,9 @@
     "db:status": "node scripts/database-status.mjs",
     "validate:locations": "node scripts/validate-location-candidates.mjs",
     "smoke:api": "node scripts/smoke-api.mjs",
-    "test:data": "node scripts/test-data-validation.mjs"
+    "test:data": "node scripts/test-data-validation.mjs",
+    "db:migrate": "node scripts/apply-schema.mjs",
+    "test:locations": "node scripts/test-location-validation.mjs"
   },
   "dependencies": {
     "next": "^15.5.0",
