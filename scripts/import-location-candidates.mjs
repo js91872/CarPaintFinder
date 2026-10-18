@@ -1,3 +1,5 @@
+import {loadEnvConfig} from "@next/env";
+loadEnvConfig(process.cwd());
 import {readFileSync} from "node:fs";
 import pg from "pg";
 const filename=process.argv[2];
