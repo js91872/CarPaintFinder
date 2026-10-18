@@ -4,12 +4,12 @@
     "model": "F-150",
     "yearFrom": 2017,
     "yearTo": 2017,
-    "locationText": "Inspect the Safety Compliance Certification Label in the driver's door opening, on the hinge pillar, latch post, or door edge. Find the exterior paint field marked EXT PNT on the label.",
-    "codeFieldHint": "EXT PNT",
-    "sourceUrl": "https://www.fordservicecontent.com/Ford_Content/Catalog/owner_information/2017-F-150-250-350-450-550-Owners-Manual-version_2_OM_EN-US_11_2016.pdf",
+    "locationText": "The 2017 F-150 owner's manual says the Safety Compliance Certification Label is affixed to the door hinge pillar, door latch post, or the edge of the door near the latch, next to the driver's seating position. The manual source reviewed here does not identify a paint-code field on that label.",
+    "codeFieldHint": null,
+    "sourceUrl": "https://www.fordservicecontent.com/Ford_Content/Catalog/owner_information/2017-F-150-Owners-Manual-version-1_om_EN-US_08_2016.pdf",
     "sourcePublisher": "Ford Motor Company",
     "sourceTitle": "2017 F-150 Owner's Manual — Vehicle Certification Label",
-    "reuseRights": "Factual reference only; do not reproduce Ford diagrams or manual content without permission",
+    "reuseRights": "Paraphrased label placement only; paint-field identity not established by this source. Do not reproduce Ford diagrams or manual content without permission.",
     "verification": "pending"
   }
 ]

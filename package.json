@@ -12,6 +12,7 @@
     "db:status": "node scripts/database-status.mjs",
     "validate:locations": "node scripts/validate-location-candidates.mjs",
     "smoke:api": "node scripts/smoke-api.mjs",
+    "test:db-api": "node scripts/test-db-api.mjs",
     "test:data": "node scripts/test-data-validation.mjs",
     "db:migrate": "node scripts/apply-schema.mjs",
     "test:locations": "node scripts/test-location-validation.mjs"
@@ -28,5 +29,8 @@
     "@types/react": "^19.0",
     "@types/react-dom": "^19.0",
     "@types/pg": "^8.11.0"
+  },
+  "overrides": {
+    "postcss": "^8.5.30"
   }
 }
