@@ -9,3 +9,6 @@ CREATE INDEX idx_paint_colors_code ON paint_colors (lower(oem_code));
 CREATE INDEX idx_paint_applications_model_year ON paint_applications(vehicle_model_id,year_from,year_to);
 -- Only verified records should be exposed on public lookup pages.
 CREATE VIEW public_paint_applications AS SELECT pc.id AS paint_color_id, m.name AS manufacturer, vm.name AS model, pc.oem_code, pc.name AS color_name, pa.year_from, pa.year_to FROM paint_applications pa JOIN paint_colors pc ON pc.id=pa.paint_color_id JOIN vehicle_models vm ON vm.id=pa.vehicle_model_id JOIN manufacturers m ON m.id=vm.manufacturer_id WHERE pc.verification='verified' AND pa.verification='verified';
+
+-- Verified label locations only; source URL provides traceability.
+CREATE VIEW public_label_locations AS SELECT m.name AS manufacturer,vm.name AS model,ll.year_from,ll.year_to,ll.location_text,ll.code_field_hint,s.url AS source_url FROM label_locations ll JOIN vehicle_models vm ON vm.id=ll.vehicle_model_id JOIN manufacturers m ON m.id=vm.manufacturer_id JOIN sources s ON s.id=ll.source_id WHERE ll.verification='verified';
