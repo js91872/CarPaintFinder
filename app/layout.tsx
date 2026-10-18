@@ -1,0 +1,3 @@
+import "./style.css";import type {Metadata} from "next";
+export const metadata:Metadata={title:{default:"CarPaintFinder | Find Your Vehicle Paint Code",template:"%s | CarPaintFinder"},description:"Learn where to find your car's factory paint code with vehicle-specific guidance and clear limitations.",robots:{index:false,follow:true}};
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en"><body><header><a className="logo" href="/">CarPaintFinder<span>.</span></a><nav><a href="/paint-codes">Paint code guides</a><a href="/about">About</a></nav></header><main>{children}</main><footer>© CarPaintFinder · Research-stage reference. Verify against your vehicle label and manufacturer.</footer></body></html>}
