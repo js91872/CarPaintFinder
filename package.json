@@ -8,7 +8,8 @@
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "import:paint": "node scripts/import-paint-candidates.mjs",
-    "import:locations": "node scripts/import-location-candidates.mjs"
+    "import:locations": "node scripts/import-location-candidates.mjs",
+    "db:status": "node scripts/database-status.mjs"
   },
   "dependencies": {
     "next": "^15.5.0",
