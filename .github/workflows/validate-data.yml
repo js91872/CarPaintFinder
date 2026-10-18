@@ -19,3 +19,5 @@ jobs:
         with:
           node-version: '22'
       - run: node scripts/validate-import.mjs data/import-example.json
+      - run: node scripts/validate-location-candidates.mjs data/location-candidates-oem-2024-2025.json
+      - run: node scripts/validate-location-candidates.mjs data/location-candidates-ford-2017.json

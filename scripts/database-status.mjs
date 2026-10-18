@@ -14,6 +14,7 @@ for(const [label,sql] of [
 ["Paint applications by review status","SELECT verification,COUNT(*)::int AS count FROM paint_applications GROUP BY verification ORDER BY verification"],
 ["Label locations by review status","SELECT verification,COUNT(*)::int AS count FROM label_locations GROUP BY verification ORDER BY verification"],
 ["Public verified paint applications","SELECT COUNT(*)::int AS count FROM public_paint_applications"],
-["Public verified label locations","SELECT COUNT(*)::int AS count FROM public_label_locations"]
+["Public verified label locations","SELECT COUNT(*)::int AS count FROM public_label_locations"],
+["Applied schema migrations","SELECT migration_name,applied_at FROM schema_migrations ORDER BY migration_name"]
 ]){const r=await client.query(sql);console.log("\n"+label);console.table(r.rows)}
 }finally{await client.end()}

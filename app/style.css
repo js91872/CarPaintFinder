@@ -4,7 +4,12 @@
 .finder-tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;border-bottom:1px solid #e1e8f1;padding-bottom:12px}
 .finder-tabs button{font:inherit;font-weight:750;border:1px solid #dbe5f0;background:#f5f8fc;color:#34465d;border-radius:10px;padding:12px;cursor:pointer}
 .finder-tabs button.active{background:#155ab0;border-color:#155ab0;color:#fff}
-.finder-tabs button:focus-visible,.search-button:focus-visible{outline:3px solid #f49c53;outline-offset:3px}
+.finder-tabs button:focus-visible,.search-button:focus-visible,.clear-button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #f49c53;outline-offset:3px}
 .finder-description{color:#52627a;margin:15px 0 20px}
+.field-help{margin:10px 0 0;font-size:14px;color:#61718a}
+.finder-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.finder-actions .search-button{margin-top:16px}
+.clear-button{margin-top:16px;border:1px solid #c8d5e5;background:#fff;color:#293e5b;font:inherit;font-weight:650;padding:12px 18px;border-radius:9px;cursor:pointer}
+.clear-button:disabled{opacity:.5;cursor:not-allowed}
 .result-caveat{font-size:14px;color:#61718a}
 @media(max-width:420px){.finder-tabs{grid-template-columns:1fr}.finder{padding:16px}}

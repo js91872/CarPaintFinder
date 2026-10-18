@@ -16,15 +16,15 @@ sudo -u postgres createdb -O carpaintfinder carpaintfinder
 
 Choose a strong password at the prompt. If the role or database already exists, skip its creation.
 
-## 2. Apply schema
+## 2. Apply database migrations
 
 ```bash
 cd ~/CarPaintFinder
-psql -h 127.0.0.1 -U carpaintfinder -d carpaintfinder -v ON_ERROR_STOP=1 -f db/schema.sql
-psql -h 127.0.0.1 -U carpaintfinder -d carpaintfinder -v ON_ERROR_STOP=1 -f db/002_verified_locations.sql
+npm run db:migrate
+npm run db:status
 ```
 
-The initial schema is for a new empty database. Do not rerun it against an existing populated database without migration planning.
+Migrations are versioned and checksummed. The runner records each applied migration and refuses to silently rerun edited migration files. It can adopt a complete database created with the older `db/schema.sql` bootstrap.
 
 ## 3. Configure local app
 

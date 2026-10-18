@@ -6,17 +6,33 @@ jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_USER: carpaintfinder
+          POSTGRES_PASSWORD: cp-test-password
+          POSTGRES_DB: carpaintfinder_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U carpaintfinder -d carpaintfinder_test"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    env:
+      DATABASE_URL: postgresql://carpaintfinder:cp-test-password@localhost:5432/carpaintfinder_test
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      # A lockfile has not yet been committed. Generate it deterministically
-      # for this CI run, then install from that exact resolution.
-      - run: npm install --package-lock-only --ignore-scripts
       - run: npm ci
       - run: npm run test:data
       - run: npm run test:locations
+      - run: npm run db:migrate
+      - run: npm run db:migrate
+      - run: npm run db:status
       - run: npm run typecheck
       - run: npm run build
       - name: Start production server
@@ -36,7 +52,8 @@ jobs:
           BASE_URL: http://127.0.0.1:3099
         run: |
           npm run smoke:api
-          for path in / /paint-codes /how-to-find-paint-code /about /privacy /terms /contact /api/health /robots.txt /sitemap.xml; do
+          npm run test:db-api
+          for path in / /paint-codes /how-to-find-paint-code /paint-code-guides/honda-accord-hybrid-2024 /paint-code-guides/chevrolet-equinox-ev-2025 /about /privacy /terms /contact /api/health /robots.txt /sitemap.xml; do
             curl --fail --silent --show-error "http://127.0.0.1:3099$path" > /dev/null
           done
       - name: Show server logs on failure
