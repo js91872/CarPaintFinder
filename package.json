@@ -10,7 +10,8 @@
     "import:paint": "node scripts/import-paint-candidates.mjs",
     "import:locations": "node scripts/import-location-candidates.mjs",
     "db:status": "node scripts/database-status.mjs",
-    "validate:locations": "node scripts/validate-location-candidates.mjs"
+    "validate:locations": "node scripts/validate-location-candidates.mjs",
+    "smoke:api": "node scripts/smoke-api.mjs"
   },
   "dependencies": {
     "next": "^15.5.0",
