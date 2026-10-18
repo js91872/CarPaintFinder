@@ -1,0 +1,28 @@
+[
+  {
+    "manufacturer": "Honda",
+    "model": "Accord Hybrid",
+    "yearFrom": 2024,
+    "yearTo": 2024,
+    "locationText": "For U.S.-market models, check the color-code label on the driver's doorjamb before painting the vehicle.",
+    "codeFieldHint": "Color code label",
+    "sourceUrl": "https://techinfo.honda.com/rjanisis/pubs/om/ah/a30b2424iom/enu/details/131245047-15183.html",
+    "sourcePublisher": "Honda",
+    "sourceTitle": "2024 Accord Hybrid Owner's Manual — Exterior Care / Painting the Vehicle",
+    "reuseRights": "Facts paraphrased from manufacturer manual; no illustrations or substantial text reproduced",
+    "verification": "pending"
+  },
+  {
+    "manufacturer": "Chevrolet",
+    "model": "Equinox EV",
+    "yearFrom": 2025,
+    "yearTo": 2025,
+    "locationText": "Check the certification label on the center pillar for a large barcode containing vehicle paint information. If that barcode is absent, check the service-parts information label inside the trunk.",
+    "codeFieldHint": "Service Parts Identification / barcode paint information",
+    "sourceUrl": "https://contentdelivery.ext.gm.com/bypass/gma-content-api/resources/sites/GMA/content/staging/MANUALS/9000/MA9373/en_US/1.0/25_CHEV_Equinox_EV_OM_en_US_U_18247401A_2024AUG05.pdf",
+    "sourcePublisher": "General Motors",
+    "sourceTitle": "2025 Chevrolet Equinox EV Owner's Manual — Service Parts Identification",
+    "reuseRights": "Facts paraphrased from manufacturer manual; no illustrations or substantial text reproduced",
+    "verification": "pending"
+  }
+]
