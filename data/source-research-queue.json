@@ -1,0 +1,32 @@
+[
+  {
+    "make": "Chevrolet",
+    "model": "Silverado",
+    "task": "Locate year-specific GM documentation for paint-code label and option-code interpretation",
+    "status": "needs-source-review"
+  },
+  {
+    "make": "Jeep",
+    "model": "Compass",
+    "task": "Locate year-specific Mopar or owner's manual documentation for paint label",
+    "status": "needs-source-review"
+  },
+  {
+    "make": "Ford",
+    "model": "F-150",
+    "task": "Find year-specific Ford label documentation and paint field designation",
+    "status": "needs-source-review"
+  },
+  {
+    "make": "Toyota",
+    "model": "Corolla",
+    "task": "Find year-specific Toyota certification label C/TR documentation",
+    "status": "needs-source-review"
+  },
+  {
+    "make": "Honda",
+    "model": "Civic",
+    "task": "Find year-specific Honda paint-code label location guidance",
+    "status": "needs-source-review"
+  }
+]
