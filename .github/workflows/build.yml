@@ -15,6 +15,7 @@ jobs:
       # for this CI run, then install from that exact resolution.
       - run: npm install --package-lock-only --ignore-scripts
       - run: npm ci
+      - run: npm run test:data
       - run: npm run typecheck
       - run: npm run build
       - name: Start production server
